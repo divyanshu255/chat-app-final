@@ -1,11 +1,11 @@
 
-// utils/socket.ts
+
 import { io, Socket } from 'socket.io-client';
 
 let socket: Socket | null = null;
 
 export const connectSocket = (userId: string) => {
-  socket = io('https://chat-app1-432f.onrender.com'); // Replace with your backend IP/domain
+  socket = io('https://chat-app1-432f.onrender.com');
   socket.emit('join', userId);
 };
 
